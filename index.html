@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>아이엠파인 SD팀 자바스크립트 개발자 면접 과제</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>
+      <h1>아이엠파인 SD팀 지원자 배정원</h1>
+    </header>
+
+    <main>
+      <section id="chart-section">
+        <canvas id="chart-canvas" width="1000px" height="1000px" />
+      </section>
+
+      <section id="button-section">
+        <button id="open-table-modal">데이터 목록</button>
+        <button id="open-add-modal">값 추가</button>
+        <button id="open-json-modal">JSON 편집</button>
+      </section>
+    </main>
+
+    <div id="modal-add" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>값 추가</h2>
+          <span class="close-button" data-close="modal-add">×</span>
+        </div>
+        <input type="text" id="new-id" placeholder="ID" />
+        <input type="number" id="new-value" placeholder="값" />
+        <button id="add-button" class="apply-button">Add</button>
+      </div>
+    </div>
+
+    <div id="modal-table" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>데이터 목록</h2>
+          <span class="close-button" data-close="modal-table">×</span>
+        </div>
+        <table id="data-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>값</th>
+              <th>편집</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <button id="apply-table" class="apply-button">Apply</button>
+      </div>
+    </div>
+
+    <div id="modal-json" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>JSON 편집</h2>
+          <span class="close-button" data-close="modal-json">×</span>
+        </div>
+        <textarea id="json-editor" rows="50" cols="50"></textarea><br />
+        <button id="apply-json" class="apply-button">Apply</button>
+      </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

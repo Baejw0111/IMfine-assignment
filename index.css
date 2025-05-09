@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  padding: 20px;
+  text-align: right;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  padding: 0 20px;
+}
+
+#chart-section {
+  width: 100%;
+  overflow-x: auto;
+}
+
+#chart-canvas {
+  display: block;
+  margin: 0 auto;
+  min-width: 1000px;
+  height: 1000px;
+}
+
+section {
+  margin: 20px 0;
+}
+
+input {
+  margin: 10px 0;
+  padding: 5px 10px;
+}
+
+button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+textarea {
+  width: 100%;
+  font-family: monospace; /* 고정폭 설정 */
+}
+
+#data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+#data-table th,
+#data-table td {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  text-align: center;
+}
+
+#data-table thead {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+#data-table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+.apply-button {
+  margin-top: 10px;
+}
+
+.close-button {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.feedback-message {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  z-index: 1000;
+  animation: slideIn 0.3s ease-out;
+}
+
+.feedback-message.error {
+  background-color: red;
+}
+
+.feedback-message.success {
+  background-color: green;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.chart-tooltip {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  pointer-events: none;
+  z-index: 1000;
+  display: none;
+}
+
+.delete-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.delete-btn:hover {
+  background-color: #cc0000;
+}
