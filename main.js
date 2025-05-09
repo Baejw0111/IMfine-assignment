@@ -1,8 +1,8 @@
-import { loadData, saveData } from "./storage.js";
-import { renderChart } from "./chartRenderer.js";
-import { renderTable } from "./tableRenderer.js";
-import { openModal, closeModal } from "./modal.js";
-import { validateData, showFeedback } from "./util.js";
+import { loadData, saveData } from "./storage.js"; // 데이터 저장 및 로드
+import { renderChart } from "./chartRenderer.js"; // 차트 렌더링
+import { renderTable } from "./tableRenderer.js"; // 테이블 렌더링
+import { openModal, closeModal } from "./modal.js"; // 모달 열기 및 닫기
+import { validateData, showFeedback } from "./util.js"; // 데이터 검증 및 피드백
 
 let data = loadData(); // 직렬화된 형태의 JSON 데이터
 let stagedData = JSON.parse(JSON.stringify(data)); // 파싱된 JSON 데이터
